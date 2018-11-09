@@ -11,7 +11,7 @@ const defaults = {
   port: 8989
 }
 
-function oneApi (opts, cb) {
+function api (opts, cb) {
   debug('oneApi')
   opts = xtend(defaults, opts)
   const server = new Hapi.Server()
@@ -23,7 +23,7 @@ function oneApi (opts, cb) {
 }
 
 function start (opts) {
-  oneApi(opts, (err, server) => {
+  api(opts, (err, server) => {
     if (err) { throw err }
     server.start(function (err) {
       if (err) { throw err }
@@ -32,7 +32,7 @@ function start (opts) {
   })
 }
 
-module.exports = oneApi
+module.exports = api
 
 if (require.main === module) {
   start(minimist(process.argv.slice(2), {

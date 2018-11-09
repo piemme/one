@@ -1,11 +1,11 @@
 'use strict'
 
 var test = require('tape-catch')
-var build = require('../one')
-var one
+var build = require('../business')
+var business
 
-test('simple test', function (t) {
-  one = build()
-  t.equal(1, one.answerOne())
+test('get one (1) from answer', function (t) {
+  business = build()
+  t.equal(1, business.answerOne())
   t.end()
 })

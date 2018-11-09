@@ -5,17 +5,17 @@ const Lab = require('lab')
 const lab = exports.lab = Lab.script({
   output: process.stdout
 })
-const oneApi = require('../server')
+const serverApi = require('../server')
 
-lab.experiment('Integration testing server oneApi', () => {
+lab.experiment('Integration testing server API', () => {
   let server
   lab.beforeEach((done) => {
-    oneApi({ port: 8989 }, (err, s) => {
+    serverApi({ port: 8989 }, (err, s) => {
       server = s
       done(err)
     })
   })
-  lab.test('Testing for "Hello World"', (done) => {
+  lab.test('Api: testing for "Hello World"', (done) => {
     const options = { method: 'GET', url: '/' }
     server.inject(options, function (response) {
       const result = response.result
@@ -23,7 +23,7 @@ lab.experiment('Integration testing server oneApi', () => {
       done()
     })
   })
-  lab.test('Testing for One (1)', (done) => {
+  lab.test('Api: testing for One (1)', (done) => {
     const options = { method: 'GET', url: '/one' }
     server.inject(options, function (response) {
       const result = response.result

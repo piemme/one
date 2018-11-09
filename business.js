@@ -1,6 +1,6 @@
 'use strict'
 
-function one () {
+function business () {
   return {
     answerOne: answer
   }
@@ -16,4 +16,4 @@ function one () {
   }
 }
 
-module.exports = one
+module.exports = business
