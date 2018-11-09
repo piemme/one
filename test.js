@@ -9,4 +9,3 @@ test('simple test', function (t) {
   t.equal(1, one.answer())
   t.end()
 })
-

@@ -1,9 +1,6 @@
 'use strict'
 
 function one () {
-
-  var internal
-
   return {
     answer: answer
   }
@@ -14,7 +11,6 @@ function one () {
   }
 
   function answer () {
-    internal
     privateStuff()
     return 1
   }
