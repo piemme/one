@@ -7,7 +7,7 @@
     "author": "Paolo Manca",
     "scripts": {
         "setup": "npm install",
-        "setup:clean": "rm -fr ./node_modules",        
+        "setup:clean": "rm -fr ./node_modules",
         "test": "tape test.js | faucet",
         "lint": "standard",
         "lint:count": "standard | standard-reporter | wc -l",
