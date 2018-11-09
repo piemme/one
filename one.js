@@ -2,7 +2,7 @@
 
 function one () {
   return {
-    answer: answer
+    answerOne: answer
   }
 
   function privateStuff () {

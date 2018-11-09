@@ -6,6 +6,6 @@ var one
 
 test('simple test', function (t) {
   one = build()
-  t.equal(1, one.answer())
+  t.equal(1, one.answerOne())
   t.end()
 })
