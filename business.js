@@ -5,14 +5,13 @@ function business () {
     answerOne: answer
   }
 
-  function privateStuff () {
-    var stuff
-    return stuff
+  function aComplicatedBusinessLogic () {
+    const ONE = 1
+    return ONE
   }
 
   function answer () {
-    privateStuff()
-    return 1
+    return aComplicatedBusinessLogic()
   }
 }
 
