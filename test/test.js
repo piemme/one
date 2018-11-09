@@ -1,7 +1,7 @@
 'use strict'
 
 var test = require('tape-catch')
-var build = require('./')
+var build = require('../one')
 var one
 
 test('simple test', function (t) {

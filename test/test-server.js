@@ -5,7 +5,7 @@ const Lab = require('lab')
 const lab = exports.lab = Lab.script({
   output: process.stdout
 })
-const oneApi = require('./server')
+const oneApi = require('../server')
 
 lab.experiment('Integration testing server oneApi', () => {
   let server
@@ -27,7 +27,7 @@ lab.experiment('Integration testing server oneApi', () => {
     const options = { method: 'GET', url: '/one' }
     server.inject(options, function (response) {
       const result = response.result
-      code.expect(result).to.equal('1')
+      code.expect(result).to.equal(1)
       done()
     })
   })
