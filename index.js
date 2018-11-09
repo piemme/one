@@ -1,9 +1,5 @@
 'use strict'
 
-// require deps
-
-// SYNC init (like read conf file)
-
 function one () {
 
   var internal
@@ -20,7 +16,7 @@ function one () {
   function answer () {
     internal
     privateStuff()
-    return 42
+    return 1
   }
 }
 
