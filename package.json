@@ -26,6 +26,7 @@
         "automation"
     ],
     "precommit": [
+        "precommit-msg",
         "lint",
         "test"
     ],
