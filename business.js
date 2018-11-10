@@ -2,7 +2,8 @@
 
 function business () {
   return {
-    answerOne: answer
+    answerOne: answer,
+    revision: revision
   }
 
   function aComplicatedBusinessLogic () {
@@ -12,6 +13,10 @@ function business () {
 
   function answer () {
     return aComplicatedBusinessLogic()
+  }
+
+  function revision () {
+    return require('child_process').execSync('git rev-parse HEAD').toString()
   }
 }
 
