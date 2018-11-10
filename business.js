@@ -1,11 +1,9 @@
 'use strict'
 
-const fs = require('fs')
-
 function business () {
   return {
     answerOne: answer,
-    revision: revision
+    random: random
   }
 
   function aComplicatedBusinessLogic () {
@@ -17,8 +15,10 @@ function business () {
     return aComplicatedBusinessLogic()
   }
 
-  function revision () {
-    return fs.readFileSync('.git/refs/heads/master', 'utf8')
+  function random () {
+    const MIN = 1
+    const MAX = 10
+    return Math.floor((Math.random() * MIN) + MAX)
   }
 }
 

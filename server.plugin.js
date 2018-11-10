@@ -8,12 +8,12 @@ module.exports.register = function (server, options, next) {
   function getOne (request, reply) {
     reply(business.answerOne())
   }
-  function getRevision (request, reply) {
-    reply(business.revision())
+  function getRandom (request, reply) {
+    reply(business.random())
   }
   server.route({ method: 'GET', path: '/', handler: hello })
   server.route({ method: 'GET', path: '/one', handler: getOne })
-  server.route({ method: 'GET', path: '/rev', handler: getRevision })
+  server.route({ method: 'GET', path: '/rev', handler: getRandom })
   next()
 }
 

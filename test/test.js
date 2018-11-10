@@ -10,9 +10,9 @@ test('get one (1) from answer', function (t) {
   t.end()
 })
 
-test('get revision ', function (t) {
+test('get randon number 1-10 ', function (t) {
   business = build()
-  console.log('REV', business.revision())
-  t.equal(41, business.revision().length)
+  t.ok(business.random() >= 1)
+  t.ok(business.random() <= 10)
   t.end()
 })
