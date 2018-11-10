@@ -6,6 +6,6 @@ var business
 
 test('get one (1) from answer', function (t) {
   business = build()
-  t.equal(1, business.answerOne())
+  t.equal(2, business.answerOne())
   t.end()
 })
