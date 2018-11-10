@@ -1,5 +1,7 @@
 'use strict'
 
+const fs = require('fs')
+
 function business () {
   return {
     answerOne: answer,
@@ -16,7 +18,7 @@ function business () {
   }
 
   function revision () {
-    return require('child_process').execSync('git rev-parse HEAD').toString()
+    return fs.readFileSync('.git/refs/heads/master', 'utf8')
   }
 }
 
