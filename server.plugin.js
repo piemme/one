@@ -13,7 +13,7 @@ module.exports.register = function (server, options, next) {
   }
   server.route({ method: 'GET', path: '/', handler: hello })
   server.route({ method: 'GET', path: '/one', handler: getOne })
-  server.route({ method: 'GET', path: '/rev', handler: getRandom })
+  server.route({ method: 'GET', path: '/random', handler: getRandom })
   next()
 }
 

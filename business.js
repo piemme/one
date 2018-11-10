@@ -1,6 +1,9 @@
 'use strict'
 
 function business () {
+  const MIN = 1
+  const MAX = 10
+
   return {
     answerOne: answer,
     random: random
@@ -10,15 +13,16 @@ function business () {
     const ONE = 1
     return ONE
   }
+  function getRndInteger (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
 
   function answer () {
     return aComplicatedBusinessLogic()
   }
 
   function random () {
-    const MIN = 1
-    const MAX = 10
-    return Math.floor((Math.random() * MIN) + MAX)
+    return getRndInteger(MIN, MAX)
   }
 }
 
