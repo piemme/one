@@ -10,7 +10,7 @@ function business () {
   }
 
   function aComplicatedBusinessLogic () {
-    const ONE = 2
+    const ONE = 1
     return ONE
   }
   function getRndInteger (min, max) {
